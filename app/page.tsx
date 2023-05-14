@@ -5,9 +5,9 @@ import Link from "next/link";
 export default async function Home() {
   const projects = await getProjects();
   return (
-    <div className="max-w-5xl mx-auto py-20 px-8">
+    <div>
       <h1 className="text-7xl text-center font-extrabold"> Hi, I&apos;m <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-700 bg-clip-text text-transparent">Heberth Lopez</span>!</h1>
-      <p className="mt-8 text-xl text-gray-600">Aloha everyone! Check out my projects:</p>
+      <p className="mt-16 text-xl text-gray-600">Aloha everyone! Check out my projects:</p>
       <h2 className="mt-16 font-bold text-gray-700 text-3xl">My Projects</h2>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       { projects.map(project => (
