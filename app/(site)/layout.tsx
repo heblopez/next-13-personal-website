@@ -21,11 +21,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`} >
-        <header className="max-w-5xl mx-auto bg-white px-4 py-5 top-0 sticky flex items-center justify-between">
+        <header className="max-w-5xl mx-auto bg-white px-4 py-2 top-0 sticky flex items-center justify-between z-50">
           <Link className="bg-gradient-to-l from-orange-400 via-red-500 to-purple-700 bg-clip-text text-transparent text-2xl drop-shadow font-extrabold p-4" href={'/'}> @heblopez </Link>
           <div className="flex items-center gap-12 text-md font-semibold text-purple-700">
             {pages.map((page) => (<Link key={page._id} href={`/${page.slug}`} className="hover:underline hover:text-purple-600 transition">{page.title}</Link>))}
-          </div>        
+          </div>
         </header>
         <main className="max-w-5xl mx-auto px-8 py-16">{children}</main>
       </body>
